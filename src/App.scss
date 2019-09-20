@@ -1,0 +1,204 @@
+$blue: #007eff;
+
+.WR__app {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 10vh 2rem 30vh;
+  box-sizing: border-box;
+
+  @media (max-width: 1280px) {
+    width: 900px;
+  }
+  @media (max-width: 960px) {
+    width: 720px;
+    padding: 5vh 2rem 15vh;
+  }
+  @media (max-width: 600px) {
+    width: unset;
+    padding: 5vh 1.5rem 15vh;
+  }
+}
+
+.WR__header {
+  display: flex;
+  align-items: flex-end;
+
+  .WR__illus {
+    width: 33vw;
+    img {
+      width: 100%;
+    }
+  }
+  .WP__intro {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      margin: 16px 0 8px;
+      line-height: 1.1em;
+      font-size: 3.2rem;
+    }
+    .WR__intro_details {
+      margin: 16px 0 32px;
+      display: flex;
+
+      & > div {
+        font-family: "Roboto Mono", monospace;
+        border: 2px solid #111;
+        padding: 16px 22px;
+        display: inline-table;
+        font-size: 0.9rem;
+        margin-right: 16px;
+
+        img {
+          width: 18px;
+          margin-right: 6px;
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+
+  .WR__logo {
+    $logoSize: 48px;
+
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    margin-left: -($logoSize + 12);
+    font-family: "Roboto Mono", monospace;
+
+    img {
+      width: $logoSize;
+      margin-right: 12px;
+    }
+  }
+
+  @media (max-width: 960px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    .WP__intro {
+      align-items: center;
+      text-align: center;
+      h1 {
+        font-size: 2.4rem;
+      }
+      .WR__intro_details {
+      }
+    }
+    .WR__logo {
+      font-size: 1.8rem;
+      margin-left: 0;
+      img {
+        width: 32px;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .WP__intro {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    .WR__logo {
+      font-size: 1.28rem;
+      margin-left: 0;
+    }
+    .WR__intro_details {
+      flex-direction: column;
+      & > div {
+        margin: 0 0 16px 0;
+      }
+    }
+  }
+}
+
+.WR__instruction {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.WR__form-question {
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: block;
+}
+
+.WR__form-control {
+  font-size: 1.2rem;
+  margin-bottom: 52px;
+  input[type="radio"] {
+    margin-right: 12px;
+  }
+  input[type="text"] {
+    padding: 10px 12px;
+    min-width: 300px;
+    max-width: 100%;
+
+    margin: 8px 0;
+    font-size: 1.8rem;
+    border: none;
+    border-bottom: 3px solid #111;
+    color: $blue;
+
+    &:focus {
+      outline: none;
+      color: #111;
+      border-color: $blue;
+    }
+  }
+  select {
+    height: 50px;
+    font-size: 1.2rem;
+    background: #fafafa;
+    border: 2px solid #444;
+    max-width: 100%;
+    margin-top: 8px;
+  }
+}
+
+.WR__form-control_part {
+  margin-bottom: 52px;
+}
+
+.WR_submitButton {
+  $fbColor: #3c5a99;
+
+  font-size: 1.5rem;
+  background: #3c5a99;
+  padding: 14px 18px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 8px 8px 0px 0 #222;
+
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    transform: scale(1.05) translateY(-4px);
+  }
+}
+
+.WR__form-done {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  h2 {
+    color: $blue;
+    margin-bottom: 0;
+    font-size: 3.4rem;
+  }
+  .WR__form-done_code_label {
+    margin: 24px 12px 0 0;
+  }
+  .WR__form-done_code {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+}

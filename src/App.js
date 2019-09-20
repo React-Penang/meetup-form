@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './media/logo_dark.png';
+import illus from './media/illus.png';
+import date from './media/date.svg';
+import flag from './media/flag.svg';
+
+import './App.scss';
+import AttendanceForm from './components/AttendanceForm';
+
+const MEET_UP_ID = 'reactmeetup1';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="WR__app">
+      <header className="WR__header">
+
+        <div className="WP__intro">
+          <div className="WR__logo">
+            <img src={logo} alt="logo" />
+            React: Penang
+          </div>
+
+          <h1>Welcome to our first ever meetup!</h1>
+
+          <div className="WR__intro_details">
+            <div><img src={date} draggable="false" alt="Date" />21 September 2019</div>
+            <div><img src={flag} draggable="false" alt="Date" />@CAT Penang</div>
+          </div>
+        </div>
+
+        <div className="WR__illus">
+          <img src={illus} alt="React: Penang" />
+        </div>
       </header>
-    </div>
-  );
+
+      <AttendanceForm meetupId={MEET_UP_ID} />
+    </div>);
 }
 
 export default App;
