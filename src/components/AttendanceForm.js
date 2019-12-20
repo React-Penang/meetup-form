@@ -75,7 +75,7 @@ function AttendanceForm({meetupId}) {
               <select id='level' name='level' ref={register} required>
                 <option value='beginner'>I am new</option>
                 <option value='for-fun'>Sometimes I write React #sometimes</option>
-                <option value='for-living'>I write Reach for a living</option>
+                <option value='for-living'>I write React for a living</option>
               </select>
             </div>
 
