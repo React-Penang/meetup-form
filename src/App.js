@@ -7,7 +7,7 @@ import flag from './media/flag.svg';
 import './App.scss';
 import AttendanceForm from './components/AttendanceForm';
 
-const MEET_UP_ID = 'reactmeetup1';
+const MEET_UP_ID = 'reactmeetup2';
 
 function App() {
   return (
@@ -20,10 +20,10 @@ function App() {
             React: Penang
           </div>
 
-          <h1>Welcome to our first ever meetup!</h1>
+          <h1>Penang React Meetup #2</h1>
 
           <div className="WR__intro_details">
-            <div><img src={date} draggable="false" alt="Date" />21 September 2019</div>
+            <div><img src={date} draggable="false" alt="Date" />21 December 2019</div>
             <div><img src={flag} draggable="false" alt="Date" />@CAT Penang</div>
           </div>
         </div>

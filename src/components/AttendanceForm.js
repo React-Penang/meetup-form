@@ -27,7 +27,8 @@ function AttendanceForm({meetupId}) {
       setSuccessCode(docId);
 
     } catch (e) {
-      const {code, message} = e;
+      console.log(e);
+      const {/* code, */ message} = e;
       alert(message);
     }
   }
@@ -62,7 +63,7 @@ function AttendanceForm({meetupId}) {
 
               {
                 watchStudent === 'no' && (<div className="WR__form-control_part">
-                  <label htmlFor="jobTitle" className="WR__form-question">Job Title</label>
+                  <label htmlFor="jobTitle" className="WR__form-question">Job title</label>
                   <input name="orgTitle" ref={register} required autoComplete="organization-title" type="text" />
                 </div>)
               }
@@ -73,8 +74,8 @@ function AttendanceForm({meetupId}) {
               <label htmlFor='level' className="WR__form-question">Your react familiarity...</label>
               <select id='level' name='level' ref={register} required>
                 <option value='beginner'>I am new</option>
-                <option value='intermediate'>I write React, but sometimes I don't know what I'm doing</option>
-                <option value='advanced'>I know React inside-out</option>
+                <option value='for-fun'>Sometimes I write React #sometimes</option>
+                <option value='for-living'>I write Reach for a living</option>
               </select>
             </div>
 
