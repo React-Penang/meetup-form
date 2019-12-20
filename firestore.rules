@@ -1,9 +1,8 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /reactmeetup1/{userId} {
+    match /reactmeetup2/{userId} {
       allow create: if request.auth.uid != null;
     }
-    
   }
 }
