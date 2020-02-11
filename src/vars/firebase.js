@@ -1,8 +1,8 @@
-import firebase from 'firebase';
-import {initializeApp} from 'firebase/app';
+import firebase from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/firestore';
 
-const firebaseApp = initializeApp({
+const firebaseApp = firebase.initializeApp({
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "meetup-react-penang.web.app",
   databaseURL: "https://react-penang.firebaseio.com",
